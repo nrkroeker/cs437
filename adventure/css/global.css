@@ -1,0 +1,39 @@
+body {
+    background: url('../img/space-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content {
+    background-color: #f4f4f4;
+    max-width: 50%;
+    padding: 16px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.content p, h1, h2, h3 {
+    font-family: 'Arial';
+}
+
+.link {
+    color: #000080;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.spaceship {
+    height: 200px;
+    padding: 16px;
+}
+
+.enemy {
+    height: 200px;
+    padding: 16px;
+}

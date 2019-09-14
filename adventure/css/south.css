@@ -1,0 +1,7 @@
+.enemy-left {
+    transform: rotate(90deg);
+}
+
+.enemy-right {
+    transform: rotate(-90deg);
+}

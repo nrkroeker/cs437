@@ -38,3 +38,7 @@ body {
     height: 200px;
     padding: 16px;
 }
+
+.hidden {
+    opacity: 0;
+}

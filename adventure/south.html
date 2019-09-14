@@ -9,25 +9,17 @@
 
     <script type="text/javascript">
         function explode() {
-            console.log("exploded")
-            const sound = document.createElement('audio')
-            console.log("exploded 1")
-            sound.setAttribute("preload", "auto");
-            sound.setAttribute("controls", "none");
-            sound.style.display = "none";
-            document.body.appendChild(sound)
-            console.log("exploded 2")
-
-            if (sound) {
-                sound.play().then(() => { }).catch(err => console.log(err))
-                console.log("exploded 3")
+            var media = document.getElementById("explosion");
+            const playPromise = media.play();
+            if (playPromise !== null) {
+                playPromise.catch(() => { media.play(); })
             }
-
         }
     </script>
 </head>
 
-<body onload="explode()">
+<body>
+    <input autofocus onfocus="explode()" class="hidden" />
     <div class="content">
         <h1>Space Chase</h1>
         <p>
@@ -46,7 +38,7 @@
     <div>
         <img class="enemy" src="img/starshipdark.svg" />
     </div>
-    <!-- <audio id="explosion" src="media/explosion.wav" type="audio/wav" preload="auto"></audio> -->
+    <audio id="explosion" src="media/explosion-sfx.mp3" type="audio/mp3"></audio>
 </body>
 
 </html>

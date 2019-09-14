@@ -6,9 +6,19 @@
     <title>Space Chase</title>
     <link rel="stylesheet" type="text/css" href="css/global.css" />
     <link rel="stylesheet" type="text/css" href="css/east.css" />
+    <script type="text/javascript">
+        function explode() {
+            var media = document.getElementById("explosion");
+            const playPromise = media.play();
+            if (playPromise !== null) {
+                playPromise.catch(() => { media.play(); })
+            }
+        }
+    </script>
 </head>
 
 <body>
+    <input autofocus onfocus="explode()" class="hidden" />
     <div class="content">
         <h1>Space Chase</h1>
         <p>
@@ -23,6 +33,7 @@
         <img class="spaceship" src="img/starship.svg" />
         <img class="flames" src="img/flames.jpg" />
     </div>
+    <audio id="explosion" src="media/explosion-sfx.mp3" type="audio/mp3"></audio>
 </body>
 
 </html>

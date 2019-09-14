@@ -5,3 +5,7 @@
 .enemy-right {
     transform: rotate(-90deg);
 }
+
+audio {
+    display: none;
+}
